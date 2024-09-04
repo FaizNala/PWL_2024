@@ -77,3 +77,11 @@ Route::resource('photos', PhotoController::class);
 
 Route::resource('photos', PhotoController::class)->only([ 'index', 'show']); 
 Route::resource('photos', PhotoController::class)->except(['create', 'store', 'update', 'destroy']); 
+
+
+//|--------------------------------Pertemuan 2 Praktikum 3---------------------------------|
+// Route::get('/greeting', function() {
+//     return view('blog.hello', ['name' => 'Nala']);
+// });
+
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
